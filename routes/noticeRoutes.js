@@ -1,5 +1,5 @@
 import express from "express"
-import {createNotice, getNotice} from "../controllers/notice.js"
+import {createNotice, deleteNotice, getNotice, updateNotice} from "../controllers/notice.js"
 
 
 const router = express.Router();
@@ -7,5 +7,7 @@ const router = express.Router();
 router.get("/",getNotice)
 
 router.post("/create",createNotice)
+router.delete("/delete/:id", deleteNotice)
+router.patch("/update/:id", updateNotice )
 
 export default router
