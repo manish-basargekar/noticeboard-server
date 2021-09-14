@@ -37,7 +37,7 @@ export const deleteNotice = async (req,res) => {
 
     await NoticeMessage.findByIdAndRemove(id)
 
-    res.json({message:"Notice deleted successfully"})
+    res.json({message:"Notice deleted successfully",id})
 }
 
 export const updateNotice = async (req, res) => {
